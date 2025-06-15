@@ -1,0 +1,30 @@
+@use "../settings/utils";
+
+.artworks-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  align-items: flex-start;
+  gap: 1rem;
+
+  @include utils.respond-to(lg){
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+.artworks-item {
+  max-width: 90%;
+  height: auto;
+  margin-bottom: 10px;
+  cursor: zoom-in;
+
+  @include utils.respond-to(lg){
+    height: 430px;
+    max-width: 33.33%;
+    flex-wrap: nowrap;
+  }
+}
+
+

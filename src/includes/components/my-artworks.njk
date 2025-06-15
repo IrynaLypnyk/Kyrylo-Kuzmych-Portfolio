@@ -1,0 +1,10 @@
+<section class="section artworks" id="artworks">
+    <h3 class="section-subtitle">- Art-works -</h3>
+    <div class="section-content">
+        <ul class="artworks-list">
+            {% for artwork in artworks %}
+            {% include "components/artwork-item.njk" %}
+            {% endfor %}
+        </ul>
+    </div>
+</section>

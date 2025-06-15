@@ -3,14 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
+    "build:css": "sass src/css/main.scss src/css/style.css --no-source-map",
+    "watch:css": "sass --watch src/css/main.scss:src/css/style.css --no-source-map",
+    "serve": "eleventy --serve",
+    "start": "npm run build:css && npm run serve",
+    "format": "prettier --write \"src/**/*.{js,css,scss,njk,md,json}\"",
+    "build": "npm run build:css && eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.1"
+    "@11ty/eleventy": "^3.1.1",
+    "prettier": "3.5.3",
+    "sass": "^1.89.2"
   }
 }

@@ -1,0 +1,20 @@
+<section class="section">
+<div class="videos" id="videos">
+    <h2 class="section-title">My Portfolio</h2>
+    <h3 class="section-subtitle">- Videos -</h3>
+    <div class="section-content">
+        <ul class="video-list">
+            {% for video in videos %}
+            {% include "components/video-item.njk" %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<div class="youtube" id="youtube">
+    <h3 class="section-subtitle">- My Youtube Channel -</h3>
+    <a href="https://www.youtube.com/channel/UChiVJxLsa9dZnE31g44S-lw?view_as=subscriber" class="youtube-link">
+        <span class="youtube-name">RAIDER STUDIOS</span>
+        <p class='youtube-descr'> my <img src="{{ baseUrl }}/svg/youtube.svg" alt="youtube-icon" class="youtube-svg"> channel since 2015</p>
+    </a>
+</div>
+</section>

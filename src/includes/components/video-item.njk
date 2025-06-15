@@ -1,0 +1,18 @@
+{% import "components/modal.njk" as Modal %}
+<li class="video-list-item">
+    <div class="video-container">
+        <div class="preview video-preview">
+            <img src="{{ baseUrl }}{{ video.preview }}" alt="{{ video.title }}">
+            <div class="video-preview-title-container">
+                <h3 class="video-preview-title">{{ video.title }}</h3>
+                {% include "components/btn-play.njk" %}
+            </div>
+        </div>
+        {% call Modal.modal() %}
+        <video controls>
+            <source src="{{ baseUrl }}{{ video.file }}" type="video/mp4">
+            This browser does not support the video tag.
+        </video>
+        {% endcall %}
+    </div>
+</li>

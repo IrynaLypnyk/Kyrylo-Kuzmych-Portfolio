@@ -1,0 +1,74 @@
+@use "../settings/variables" as vars;
+@use "../settings/utils";
+
+.hero {
+  display: block;
+  position: relative;
+  max-width: 100vw;
+  background: linear-gradient(#272b28, white);
+}
+
+.hero-image-container {
+  width: 100%;
+  height: 70vh;
+  max-width: 1124px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  overflow: hidden;
+
+  @include utils.respond-to(lg){
+    height: 80vh;
+  }
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+
+  //@include utils.respond-to(lg){
+  //  object-fit: contain;
+  //}
+}
+
+.hero-name {
+  font-size: clamp(1.2rem, 2vw, #{utils.rem(38px)});
+  color: #fff;
+  background-color: rgba(29, 35, 35, 0.3);
+  padding: 0.5em 1em ;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #fff;
+  max-width: 90vw;
+}
+
+.hero-nav {
+  background-color: vars.$gray-bg;
+  color: #000;
+  display: inline-flex;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -20px;
+  overflow: hidden;
+  max-width: 100vw;
+}
+
+.hero-nav a {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  display: inline-block;
+  padding: 0.5em 1em;
+
+  @include utils.respond-to(lg){
+    padding: 0.5em 2em;
+  }
+}
+
+.hero-nav a:hover {
+  background-color: vars.$gray-bg-hover;
+}

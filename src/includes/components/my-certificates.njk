@@ -1,0 +1,10 @@
+<section class="section certificates" id="certificates">
+    <h3 class="section-subtitle">- Certificates -</h3>
+    <div class="section-content">
+        <ul class="certificates-list">
+            {% for certificate in certificates %}
+            {% include "components/certificate-item.njk" %}
+            {% endfor %}
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,24 @@
+@use "../settings/variables" as vars;
+@use "sass:math";
+
+@mixin respond-to($break) {
+  @if $break == sm {
+    @media (min-width: vars.$bp-sm) {
+      @content;
+    }
+  } @else if $break == md {
+    @media (min-width: vars.$bp-md) {
+      @content;
+    }
+  } @else if $break == lg {
+    @media (min-width: vars.$bp-lg) {
+      @content;
+    }
+  }
+}
+
+/// Конвертує px у rem за базовим розміром шрифта
+@function rem($px) {
+  // Використовуємо math.div замість застарілого ділення через '/'
+  @return math.div($px, vars.$root-font-size) * 1rem;
+}

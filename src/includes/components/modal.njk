@@ -1,0 +1,11 @@
+{#
+Nunjucks macro for a generic modal container that wraps any inner content
+#}
+{% macro modal() %}
+<div class="modal-mask">
+    {% include "components/btn-close.njk" %}
+    <div class="modal-body">
+        {{ caller() }}
+    </div>
+</div>
+{% endmacro %}

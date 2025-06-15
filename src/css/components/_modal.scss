@@ -1,0 +1,99 @@
+@use "../settings/utils";
+.modal-mask {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  backface-visibility: hidden;
+  transition: opacity 0.5s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.modal-mask.open {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  width: 100vw;
+  height: 100vh;
+
+  & .modal-body{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  video {
+    opacity: 1;
+  }
+
+  .btn-close {
+    opacity: 1;
+  }
+
+}
+
+.btn-close {
+  stroke: #fff;
+  position: fixed;
+  cursor: pointer;
+  opacity: 0;
+  backface-visibility: hidden;
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition-delay: 0.3s;
+  z-index: 1200;
+  width: 25px;
+  height: 25px;
+  top: 7px;
+  right: 7px;
+
+  @include utils.respond-to(md){
+    width: 35px;
+    height: 35px;
+  }
+
+  @include utils.respond-to(lg){
+    width: 50px;
+    height: 50px;
+    top: 12px;
+    right: 12px;
+  }
+}
+
+.btn-close svg{
+  color: white;
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  width: 100vw;
+  max-width: 1400px;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.2);
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: 1100;
+
+  @include utils.respond-to(md){
+    width: 80vw;
+  }
+}
+
+.modal-body video {
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  backface-visibility: hidden;
+  transition: opacity 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  transition-delay: 0.2s;
+}
