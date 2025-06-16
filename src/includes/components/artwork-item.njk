@@ -1,9 +1,8 @@
-{% import "components/modal.njk" as Modal %}
 <li class="artworks-item">
-    <div class="preview artwork-preview">
+    <div class="preview artwork-preview"
+         data-type="image"
+         data-src="{{ baseUrl }}{{ artwork.file }}"
+         data-alt="{{ artwork.alt }}">
         <img src="{{ baseUrl }}{{ artwork.file }}" alt="{{ artwork.alt }}" class="img-cover">
     </div>
-    {% call Modal.modal() %}
-    <img src="{{ baseUrl }}{{ artwork.file }}" alt="{{ artwork.alt }}" class="img-full">
-    {% endcall %}
 </li>

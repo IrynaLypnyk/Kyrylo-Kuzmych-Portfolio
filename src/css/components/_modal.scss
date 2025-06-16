@@ -89,7 +89,12 @@
   }
 }
 
-.modal-body video {
+.modal-mask img {
+    max-height: 95vh;
+    max-width: 95vw;
+  }
+
+.modal-mask video {
   opacity: 0;
   width: 100%;
   height: auto;
@@ -97,3 +102,4 @@
   transition: opacity 0.5s cubic-bezier(0.55, 0, 0.1, 1);
   transition-delay: 0.2s;
 }
+

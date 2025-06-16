@@ -1,9 +1,9 @@
-{% import "components/modal.njk" as Modal %}
 <li class="certificates-item">
-    <div class="preview certificate-preview">
+    <div class="preview certificate-preview"
+         data-type="image"
+         data-src="{{ baseUrl }}{{ certificate.file }}"
+         data-alt="{{ certificate.alt }}">
+    >
         <img src="{{ baseUrl }}{{ certificate.file }}" alt="{{ certificate.alt }}" class="img-contain">
     </div>
-    {% call Modal.modal() %}
-    <img src="{{ baseUrl }}{{ certificate.file }}" alt="{{ certificate.alt }}" class="img-full">
-    {% endcall %}
 </li>
