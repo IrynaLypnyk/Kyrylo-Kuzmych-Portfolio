@@ -1,5 +1,6 @@
 ---
 title: "Kyrylo Kuzmych Portfolio"
+metaDescription: 'Portfolio of Kyrylo Kuzmych – a passionate young artist and videographer. Explore my videos, artworks, and creative projects as part of my university admission application.'
 layout: layout.njk
 baseUrl: "https://media.ilypnyk.com/kuzmych_k_portfolio/"
 heroImage: "images/my_photo2.jpg"
