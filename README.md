@@ -1,24 +1,19 @@
 # Kyrylo Kuzmych Portfolio
 
-> **Portfolio of a talented young artist and videographer created to support his university admission application. Here you can explore his videos, artworks, and evidence of his creativity and skills.**
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Live Demo](#live-demo)
-- [Technologies](#technologies)
-- [File Structure](#file-structure)
-- [License](#license)
+Portfolio website created for a young artist and videographer as part of his university application. The site presents selected video work, artworks, and creative projects in a simple, visual format.
 
 ## Overview
 
-This repository contains the source code for portfolio site built with Eleventy (11ty), SCSS, and vanilla JavaScript. It is designed to be simple, performant, and easy to extend.
+This repository contains the source code for a portfolio website I designed and developed using Eleventy (11ty), SCSS, Nunjucks, and vanilla JavaScript.
+
+The project was built as a lightweight static site with a focus on visual content, performance, responsive behaviour, and straightforward navigation.
 
 ## Features
 
-- **Video Portfolio:** Embedded video previews with modal playback
-- **Artworks Image Gallery:** Responsive image lightbox
+- **Video portfolio:** Embedded video previews with modal playback
+- **Artwork gallery:** Responsive image gallery with lightbox viewing
+- **Responsive layout:** Designed for desktop, tablet, and mobile screens
+- **Static-site architecture:** Lightweight build with minimal client-side JavaScript
 
 ## Live Demo
 
@@ -29,10 +24,10 @@ This repository contains the source code for portfolio site built with Eleventy 
 
 - **Static Site Generator:** Eleventy (11ty)
 - **Templating:** Nunjucks
-- **Styles:** SCSS (organized with ITCSS)
-- **JavaScript:** Vanilla JS (IIFE module pattern)
-- **Build Tools:** npm scripts, Sass CLI
-
+- **Styles:** SCSS with ITCSS structure
+- **JavaScript:** Vanilla JavaScript
+- **Build Tools:** npm scripts and Sass CLI
+- **Deployment:** Netlify
 
 ## File Structure
 
@@ -41,15 +36,10 @@ project-repo-name/
 ├── src/
 │   ├── css/           # SCSS source files
 │   ├── js/            # JavaScript modules
-│   ├── includes/      # Nunjucks partials & components
+│   ├── includes/      # Nunjucks partials and components
 │   └── index.md       # Main content
 ├── .eleventy.js       # Eleventy configuration
-├── package.json       # npm scripts & dependencies
+├── package.json       # npm scripts and dependencies
 ├── .gitignore         # Ignored files
 └── README.md          # Project documentation
 ```
-
-## License
-
-This project is available under the MIT License. See the [LICENSE](LICENSE) file for details.
-
